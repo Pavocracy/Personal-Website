@@ -1,0 +1,19 @@
+name: Upload Website
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  web-deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: get latest code
+      uses: actions/checkout@v2.4.0
+
+    - name: upload files
+      uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      with:
+        server: adampavey.com
+        username: ${{ secrets.ftp_username }}
+        password: ${{ secrets.ftp_password }}
