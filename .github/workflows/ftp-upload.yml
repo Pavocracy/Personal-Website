@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      
 jobs:
   web-deploy:
     name: deploy
@@ -15,5 +16,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
         server: adampavey.com
+        protocol: ftp
+        port: 21
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
