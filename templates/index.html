@@ -5,9 +5,9 @@
 	<meta name="description" content="Portfolio for Adam Pavey">
 	<meta name="keywords" content="Test, Analyst, Software, Penetration, Tester, Bug, Bounty, Cyber, Security, Maker, Breaker, Roxxum">
 	<meta name="author" content="Adam Pavey">
-	<link rel="stylesheet" href="bootstrap.css" type="text/css" />
-	<link rel="stylesheet" href="styles.css" type="text/css" />
-	<link rel="icon" href="assets/logo.svg" type="image/svg" />
+	<link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}" type="text/css" />
+	<link rel="icon" href="{{url_for('static', filename='img/logo.svg')}}" type="image/svg" />
 	<title>Make. Break. Automate!</title>
 </head>
 <body>
@@ -15,12 +15,12 @@
 		<div class="page">
 			<div class="flex1">
 				<div class="picture">
-					<img src="assets/adam.png" class="picturesize">
+					<img src="{{url_for('static', filename='img/adam.png')}}" class="picturesize">
 				</div>
 			</div>
 			<div class="flex2">
 				<div class="banner">
-					<img src="assets/roxxum-banner.png" class="bannersize">
+					<img src="{{url_for('static', filename='img/roxxum-banner.png')}}" class="bannersize">
 				</div>
 				<div class="quote">
 					<h1 class="text-secondary quotesize">Make. Break. Automate!</h1>
@@ -28,12 +28,12 @@
 				</div>
 				<div class="icon">
 					<div class="flex3">
-						<a href="mailto:findme@adampavey.com"><img src="assets/email.svg" class="iconsize grow"></a>
-						<a href="assets/Public_Resume.docx"><img src="assets/resume.svg" class="iconsize grow"></a>
-						<a href="https://www.linkedin.com/in/itsadampavey/"><img src="assets/linkedin.png" class="iconsize grow"></a>
-						<a href="https://github.com/Pavocracy"><img src="assets/github.png" class="iconsize grow"></a>
-						<a href="https://leetcode.com/Pavocracy/"><img src="assets/leetcode.png" class="iconsize grow"></a>
-						<a href="https://www.tryhackme.com/p/Pavocracy"><img src="assets/tryhackme.png" class="iconsize grow"></a>
+						<a href="mailto:findme@adampavey.com"><img src="{{url_for('static', filename='img/email.svg')}}" class="iconsize grow"></a>
+						<a href="{{url_for('static', filename='doc/Public_Resume.docx')}}"><img src="{{url_for('static', filename='img/resume.svg')}}" class="iconsize grow"></a>
+						<a href="https://www.linkedin.com/in/itsadampavey/"><img src="{{url_for('static', filename='img/linkedin.png')}}" class="iconsize grow"></a>
+						<a href="https://github.com/Pavocracy"><img src="{{url_for('static', filename='img/github.png')}}" class="iconsize grow"></a>
+						<a href="https://leetcode.com/Pavocracy/"><img src="{{url_for('static', filename='img/leetcode.png')}}" class="iconsize grow"></a>
+						<a href="https://www.tryhackme.com/p/Pavocracy"><img src="{{url_for('static', filename='img/tryhackme.png')}}" class="iconsize grow"></a>
 					</div>
 				</div>
 			</div>
