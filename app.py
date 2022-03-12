@@ -1,7 +1,7 @@
 from flask import Flask, url_for, render_template, request, redirect
 from os import system
 from time import sleep
-from hmac import new, compare_digest
+from hmac import new, compare_digest, hexdigest
 from app_secrets import update_hash
 
 app = Flask(__name__)
