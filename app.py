@@ -1,7 +1,8 @@
 from flask import Flask, url_for, render_template, request, redirect
 from os import system
 from time import sleep
-from hmac import new, compare_digest, hexdigest
+from hmac import new, compare_digest
+from hashlib import sha256
 from app_secrets import update_hash
 
 app = Flask(__name__)
@@ -35,7 +36,7 @@ def update():
         secret_hash = request.headers[sig_header].split("=")
         if len(secret_hash) == 2:
             req_sign = secret_hash[1]
-            computed_sign = new(update_hash, request.data, hashlib.sha256).hexdigest()
+            computed_sign = new(update_hash, request.data, sha256).hexdigest()
             if compare_digest(req_sign, computed_sign):
                 threading.Thread(
                     target=lambda: [
