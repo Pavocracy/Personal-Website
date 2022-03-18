@@ -15,18 +15,17 @@ def before_request():
     if request.is_secure:
         return
     url = request.url.replace("http://", "https://", 1)
-    code = 301
-    return redirect(url, code=code)
+    return redirect(url, code=302)
 
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html"), 200
 
 
 @app.route("/giftideas")
 def giftideas():
-    return render_template("gift_ideas.html")
+    return render_template("gift_ideas.html"), 200
 
 
 @app.route("/update", methods=["POST"])
@@ -44,8 +43,8 @@ def update():
                         system("systemctl restart personalwebsite.service"),
                     ]
                 ).start()
-                return "update call successful"
-    return "update call failed"
+                return "update call successful", 200
+    return "update call failed", 400
 
 
 if __name__ == "__main__":
