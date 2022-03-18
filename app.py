@@ -15,7 +15,7 @@ def before_request():
     if request.is_secure:
         return
     url = request.url.replace("http://", "https://", 1)
-    return redirect(url, code=302)
+    return redirect(url, code=301)
 
 
 @app.route("/")
@@ -43,8 +43,8 @@ def update():
                         system("systemctl restart personalwebsite.service"),
                     ]
                 ).start()
-                return "update call successful", 200
-    return "update call failed", 400
+                return "update call successful", 202
+    return "update call failed", 401
 
 
 if __name__ == "__main__":
