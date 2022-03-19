@@ -34,9 +34,9 @@ def update():
     if sig_header in request.headers:
         secret_hash = request.headers[sig_header].split("=")
         if len(secret_hash) == 2:
-            req_sign = secret_hash[1]
+            sent_sig = secret_hash[1]
             computed_sign = new(update_hash, request.data, sha256).hexdigest()
-            if compare_digest(req_sign, computed_sign):
+            if compare_digest(sent_sig, computed_sign):
                 threading.Thread(
                     target=lambda: [
                         sleep(2),
