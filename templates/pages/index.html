@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <meta name="description" content="Portfolio for Adam Pavey">
+    <meta name="keywords" content="Software, Developer, Penetration, Tester, Bug, Bounty, Cyber, Security, Maker, Breaker, Automator">
+    <title>Make. Break. Automate!</title>
+{% endblock %}
+
+{% block body %}
+    <div class="bg-dark bg-gradient">
+        <div class="page">
+            <div class="flex1">
+                <div class="picture">
+                    <img src="{{url_for('static', filename='img/adam.png')}}" class="picturesize">
+                </div>
+            </div>
+            <div class="flex2">
+                <div class="banner">
+                    <img src="{{url_for('static', filename='img/roxxum-banner.png')}}" class="bannersize">
+                </div>
+                <div class="quote">
+                    <h1 class="text-secondary quotesize">Maker, Breaker, Automator!</h1>
+                    <p class="text-secondary quotesize">I am Adam Pavey, and I live and breathe technology. It is what I am most passionate about. I was just 6 years old when my family purchased our first PC and connected to the internet. I was instantly obsessed with how much information I had access to, and how much control I had over what happened on the screen. I was browsing websites, joining forums, and finding IRC channels full of others like me; I started to ask questions, and learned from others. As I reached my teens I got into programming and basic electronics, and as I continued to learn and explore, I became very interested in network engineering, cyber security, and reverse engineering software. To this day, I have not stopped researching and learning about all kinds of technology we deploy in our society to innovate and improve our lives. I really enjoy discovering how things work, to understand how to improve them, how to automate them, or how to break them!</p>
+                </div>
+                <div class="icon">
+                    <div class="flex3">
+                        <a href="mailto:findme@adampavey.com"><img src="{{url_for('static', filename='img/email.svg')}}" class="iconsize grow"></a>
+                        <a href="{{url_for('static', filename='doc/Public_Resume.odt')}}"><img src="{{url_for('static', filename='img/resume.svg')}}" class="iconsize grow"></a>
+                        <a href="https://linkedin.com/in/itsadampavey/"><img src="{{url_for('static', filename='img/linkedin.png')}}" class="iconsize grow"></a>
+                        <a href="https://github.com/Pavocracy"><img src="{{url_for('static', filename='img/github.png')}}" class="iconsize grow"></a>
+                        <a href="https://leetcode.com/Pavocracy/"><img src="{{url_for('static', filename='img/leetcode.png')}}" class="iconsize grow"></a>
+                        <a href="https://tryhackme.com/p/Pavocracy"><img src="{{url_for('static', filename='img/tryhackme.png')}}" class="iconsize grow"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
