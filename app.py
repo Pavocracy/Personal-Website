@@ -20,12 +20,12 @@ def before_request():
 
 @app.route("/")
 def index():
-    return render_template("index.html"), 200
+    return render_template("pages/index.html"), 200
 
 
 @app.route("/giftideas")
 def giftideas():
-    return render_template("gift_ideas.html"), 200
+    return render_template("pages/gift_ideas.html"), 200
 
 
 @app.route("/update", methods=["POST"])
