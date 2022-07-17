@@ -1,0 +1,8 @@
+[Unit]
+Description=Personal Website Service
+
+[Service]
+Type=exec
+ExecStartPre=bash /srv/www/Personal-Website/update.sh
+ExecStart=bash /srv/www/Personal-Website/start.sh -p
+WorkingDirectory=/srv/www/Personal-Website
